@@ -1,0 +1,85 @@
+[INFO] Device: cuda
+[INFO] #classes=9  train=2239  val=118
+[INFO] Classes: ['actinic keratosis', 'basal cell carcinoma', 'dermatofibroma', 'melanoma', 'nevus', 'pigmented benign keratosis', 'seborrheic keratosis', 'squamous cell carcinoma', 'vascular lesion']
+[INFO] Using WeightedRandomSampler (balanced sampling).
+
+===== Stage 1: Linear Probe (freeze backbone) =====
+[Probe][1/8] train loss=2.1541 acc=0.1867 | val loss=2.1004 acc=0.2797 auc=0.7242410249123803
+[INFO] Saved: checkpoints/best_probe.pt
+[Probe][2/8] train loss=2.0310 acc=0.2966 | val loss=2.0499 acc=0.3220 auc=0.7706610542767831
+[INFO] Saved: checkpoints/best_probe.pt
+[Probe][3/8] train loss=1.9492 acc=0.3711 | val loss=2.0439 acc=0.3051 auc=0.7740598654920905
+[INFO] Saved: checkpoints/best_probe.pt
+[Probe][4/8] train loss=1.8899 acc=0.3653 | val loss=1.9925 acc=0.2966 auc=0.790132731836696
+[INFO] Saved: checkpoints/best_probe.pt
+[Probe][5/8] train loss=1.8428 acc=0.4046 | val loss=1.9789 acc=0.3220 auc=0.8028144832812352
+[INFO] Saved: checkpoints/best_probe.pt
+[Probe][6/8] train loss=1.7823 acc=0.4230 | val loss=1.9406 acc=0.3559 auc=0.8007092450506773
+[Probe][7/8] train loss=1.7480 acc=0.4417 | val loss=1.9182 acc=0.4153 auc=0.801916382495027
+[Probe][8/8] train loss=1.7250 acc=0.4404 | val loss=1.9226 acc=0.3390 auc=0.8051660035995075
+[INFO] Saved: checkpoints/best_probe.pt
+[INFO] Best Probe Metric=0.8052 (saved to checkpoints/best_probe.pt)
+
+===== Stage 2: Finetune (unfreeze all) =====
+[FT][1/25] train loss=1.3789 acc=0.5239 | val loss=1.6542 acc=0.3983 auc=0.8661575258122574
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][2/25] train loss=1.0088 acc=0.6235 | val loss=1.4526 acc=0.5339 auc=0.8917720469830444
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][3/25] train loss=0.7717 acc=0.7106 | val loss=1.4063 acc=0.5678 auc=0.9106990622335892
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][4/25] train loss=0.6429 acc=0.7597 | val loss=1.4995 acc=0.5932 auc=0.907158757222696
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][5/25] train loss=0.5682 acc=0.7879 | val loss=1.3352 acc=0.5847 auc=0.913318177512551
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][6/25] train loss=0.4749 acc=0.8151 | val loss=1.3086 acc=0.6271 auc=0.9270389315146349
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][7/25] train loss=0.4486 acc=0.8303 | val loss=1.3019 acc=0.6610 auc=0.9260176896845694
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][8/25] train loss=0.4252 acc=0.8468 | val loss=1.4369 acc=0.6186 auc=0.925640570237757
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][9/25] train loss=0.3515 acc=0.8647 | val loss=1.3057 acc=0.6695 auc=0.9317709813393957
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][10/25] train loss=0.3130 acc=0.8808 | val loss=1.2794 acc=0.6780 auc=0.9386497110921663
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][11/25] train loss=0.3016 acc=0.8879 | val loss=1.4709 acc=0.6441 auc=0.9315377237851662
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][12/25] train loss=0.2531 acc=0.9151 | val loss=1.3713 acc=0.6525 auc=0.9385502510182816
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][13/25] train loss=0.2445 acc=0.9116 | val loss=1.3088 acc=0.6525 auc=0.9352064980581605
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][14/25] train loss=0.2150 acc=0.9254 | val loss=1.6500 acc=0.5932 auc=0.937214644311831
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][15/25] train loss=0.2136 acc=0.9263 | val loss=1.5637 acc=0.6186 auc=0.935578289286729
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][16/25] train loss=0.2104 acc=0.9312 | val loss=1.4668 acc=0.6695 auc=0.929375059202425
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][17/25] train loss=0.1963 acc=0.9312 | val loss=1.5225 acc=0.6780 auc=0.9381127450980392
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][18/25] train loss=0.1928 acc=0.9303 | val loss=1.5034 acc=0.6525 auc=0.9387675239177796
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][19/25] train loss=0.1752 acc=0.9433 | val loss=1.2513 acc=0.6949 auc=0.9474400871459695
+[INFO] Saved: checkpoints/best_finetune.pt
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][20/25] train loss=0.1835 acc=0.9317 | val loss=1.5303 acc=0.6356 auc=0.9425564791133844
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][21/25] train loss=0.1674 acc=0.9460 | val loss=1.4366 acc=0.6271 auc=0.9447588093208298
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][22/25] train loss=0.1680 acc=0.9326 | val loss=1.4789 acc=0.6186 auc=0.9446226437434877
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][23/25] train loss=0.1954 acc=0.9263 | val loss=1.5935 acc=0.6441 auc=0.9349365350004736
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][24/25] train loss=0.1550 acc=0.9437 | val loss=1.7904 acc=0.5678 auc=0.9355125745950554
+[INFO] Saved: checkpoints/last_finetune.pt
+[FT][25/25] train loss=0.1511 acc=0.9424 | val loss=1.5811 acc=0.6610 auc=0.9392885052571754
+[INFO] Saved: checkpoints/last_finetune.pt
+[INFO] Best Finetune Metric=0.9474 (saved to checkpoints/best_finetune.pt)
+
+[DONE]
